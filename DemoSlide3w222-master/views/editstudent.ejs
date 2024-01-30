@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List Student</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1>Edit sinh viên : <%= sinhvien._id %></h1>
+<form action="/editStudent" method="post" enctype="application/x-www-form-urlencoded">
+<!--    name: String,-->
+<!--    hoTen: String,-->
+<!--    number: String,-->
+<!--    address: String,-->
+<!--    birthday: Date-->
+    <input name="id" value="<%= sinhvien._id %>" hidden >
+    <input name="name" value="<%= sinhvien.name %>" placeholder="Vui long nhap name...">
+    <input name="hoTen" value="<%= sinhvien.hoTen %>" placeholder="Vui long nhap hoTen...">
+    <input name="number" value="<%= sinhvien.number %>" placeholder="Vui long nhap number...">
+    <input name="address" value="<%= sinhvien.address %>" placeholder="Vui long nhap address...">
+    <input name="birthday" value="<%= sinhvien.birthday %>" placeholder="Vui long nhap birthday...">
+    <button type="submit">Edit</button>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List Student</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1>Danh sách sinh viên</h1>
+
+<% for (var i = 0; i < value.length; i++) { %>
+    <div> ID :  <%= value[i]._id %></div>
+    <div> Name : <%= value[i].name %></div>
+    <div> Ho Ten : <%= value[i].hoten %></div>
+    <div> Number :  <%= value[i].number %></div>
+    <a href="/deleteStudent?id=<%= value[i]._id %>">Delete</a>
+    <a href="/showEditStudent?id=<%= value[i]._id %>">Edit</a>
+    <hr>
+
+<% } %>
+
+</body>
+</html>
